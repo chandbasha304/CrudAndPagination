@@ -1,0 +1,241 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Container for Sidebar and Content */
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Sidebar is fixed */
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures it stays on top */
+}
+
+.sidebar__option {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 8px;
+}
+
+.sidebar__option:hover,
+.sidebar__option--active {
+  background-color: #333333;
+  color: #007bff;
+}
+
+.sidebar__logout {
+  margin-top: auto;
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Content Styles */
+.content {
+  margin-left: 250px; /* Space for the sidebar */
+  padding: 20px;
+  background-color: #ffffff;
+  flex: 1; /* Takes remaining space */
+  overflow-y: auto;
+  color: #333; /* Default text color for content */
+  display: flex;
+  flex-direction: column;
+}
+
+/* User Dashboard Styles */
+.user-dashboard {
+  flex: 1; /* Flex to take available space */
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-dashboard__title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.user-dashboard__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-dashboard__table th,
+.user-dashboard__table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-dashboard__table th {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.user-dashboard__row:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.user-dashboard__avatar {
+  border-radius: 50%;
+  border: 2px solid #007bff;
+}
+
+/* User Card Styles */
+.user-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 400px;
+  width: 100%;
+}
+
+.user-card__close {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.user-card__avatar {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.user-card__name {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.user-card__info {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pagination__button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination__button:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination__button--active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Update Component Styles */
+.update-component {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+  z-index: 2000; /* Ensures it stays on top */
+  display: flex;
+  flex-direction: column;
+}
+
+.update-component__header {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.update-component__close {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.update-component__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.update-component__form input,
+.update-component__form button {
+  margin-bottom: 15px;
+}
